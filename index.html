@@ -1,0 +1,70 @@
+---
+layout: default
+embedId: "iEASi5qEhdw"
+sales-features:
+- heading: "Your Digital Dance Tutor"
+  copy: "It's like having a personal dance tutor that fits your schedule and pace."
+  icon: /assets/images/icons/tempo.svg
+- heading: "Practice Timing and Musicallity"
+  copy: "Master dance timing and fine-tune your ear for salsa and bachata instruments"
+  icon: /assets/images/icons/horn.svg
+- heading: "Watch Teacher Videos"
+  copy: "Benefit from top industry instructors, who share exclusive dance tips and insights."
+  icon: /assets/images/icons/teacher.svg
+- heading: "Learn Synchronized Footwork"
+  copy: "Our interactive stage makes mastering complex patterns a breeze."
+  icon: /assets/images/icons/footwork.svg
+---
+
+<!-- ----------------------------------- Header ------------------------------------------- -->
+<header class="bg-dancers bg-fixed bg-no-repeat">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 justify-center pt-14 md:px-24">
+    <div class="text-center content-center p-6">
+      <img class="max-h-[23vh] inline" src="/assets/images/logo-dk.png" alt="Dance Kitchen Logo"></img>
+          <h1 class="pt-4 pb-8 text-3xl text-dk-navy-l sub-header">Your personal tutor to cook up your dance skills</h1>
+          {% include store-buttons.html %}
+    </div>
+    <div class="pb-6 grid justify-center">
+      <img class="lg:max-w-[16rem] max-w-[12rem]" src="assets/images/screenshot-dk.png" alt="Dance Kitchen Screenshot"></img>
+    </div>
+  </div>
+</header>
+
+<section class="text-dk-navy-l bg-slate-50">
+    <div class="container mx-auto py-8">
+      <h2 class="text-center pb-6">Step into Dance Kitchen</h2>
+      <div class="grid gap-8 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+        {% include feature-description.html %}
+      </div>
+    </div>
+</section>
+
+<section class="bg-dk-navy-l text-center p-8">
+  <div class="container mx-auto flex-col h-full">         
+    <div class="text-white pb-6">
+        <h2>Sign Up For Our Newsletter</h2>
+        <h4>Enter your email to receive app update and dance tips from Dance Kitchen:</h4> 
+    </div>
+    <div class="mx-4 lg:mx-32 xl:mx-64 grid text-center">
+        {% include email-form.html %}
+    </div>
+  </div>
+</section>
+  
+<section class="bg-dk-orange-l ">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 p-8 items-center">
+    <div class="text-white pb-8 gap-8 grid-flow-row grid">
+      <h2>Why use Dance Kitchen?</h2>
+      <p>Our unique approach focuses on dynamic visualization of foot movements synchronized to the music, taking you beyond traditional dance education. Don't miss out – join Dance Kitchen today and experience the future of dance education!</p>
+    </div>
+
+    <div class="my-5 order-first justify-self-center md:order-none">
+      {% include yt-video.html %}
+    </div>
+  </div>
+</section>
+
+{% include teacher-cta.html %}
+
+
+

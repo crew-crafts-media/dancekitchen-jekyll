@@ -1,0 +1,25 @@
+<section class="banner grid bg-overlay">
+    <div class="flex items-center p-4 flex-col container mx-auto text-dk-navy">
+        <h2>{{page.intro.title}}</h2>
+        <div class="flex flex-row p-8 mx-16">
+            <div class="object-contain max-h-fit">
+                <img src="{{page.intro.image}}" alt="{{page.into.alt}}" />
+            </div>
+            <div class="p-14">
+                <h3>{{page.intro.heading}}</h3>
+                <p>{{page.intro.copy}}</p>
+            </div>
+        </div>
+        {% if page.intro.subtext == "BUTTONS" %}
+            <h2 class="pt-20">{{page.intro.subheader}}</h2>
+            <div class="grid-flow-col pt-4 sm:hidden 2xl:grid">
+                {% include store-buttons.html %}
+            </div>
+        {% else %}
+            <div class="grid grid-flow-col">
+                <h2>{{page.intro.subheader}}</h2>
+                <p>{{page.intro.subtext}}</p>
+            </div>
+        {% endif %}  
+    </div>
+</section>
