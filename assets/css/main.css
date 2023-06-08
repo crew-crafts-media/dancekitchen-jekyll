@@ -54,6 +54,18 @@ a:hover {
     color: #F55602;
 }
 
+#dk-grey-l {
+    color: #F9F8F8
+}
+
+#dk-navy-l {
+    color: #004A70;
+}
+
+#flip {
+    flex-direction: row-reverse;
+}
+
 .flip-order:nth-child(even){
     flex-direction: row-reverse;
 }
@@ -129,8 +141,15 @@ form [class*=col-] {
     top: 60%;
     left: 0;
     bottom: 0;
-    right: 0;
+    right: 0; 
+}
+
+#overlay-orange::before {
     background-color: #FD945C;
+}
+
+#overlay-blue::before {
+    background-color: #0085BD;
 }
 
 .bg-overlay > * {

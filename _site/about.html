@@ -1,7 +1,5 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
 
@@ -15,9 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="/assets/css/main.css">
-
 </head>
-
 <body>
     <main class="w-full">
         <div class="min-h-[80px]">
@@ -28,17 +24,18 @@
       <div class="grow"></div>
         <nav class="justify-end no-underline text-right text-2xl text-dk-navy pr-6">
           <a class="nav-item" href="/about">About</a>
-          <a class="nav-item md:inline hidden" href="">How it Works</a>
-          <a class="nav-item md:inline hidden" href="">Dance Styles</a>
+          <a class="nav-item md:inline hidden" href="/how-it-works-page.html">How it Works</a>
+          <a class="nav-item md:inline hidden" href="/dancestyles-page.html">Dance Styles</a>
           <a class="nav-item" href="/teachers">Our Teachers</a>
           <a class="nav-item md:inline hidden" href="">Dance Dish Diares</a>
-          <a class="nav-item md:inline hidden" href="">Join the Team</a>
+          <a class="nav-item md:inline hidden" href="/community-page.html">Join the Team</a>
         </nav>  
     </div>
 </div>
 
         <section 
-    class="text-dk-grey-l bg-dk-navy-l p-8 min-h-30vh justify-center items-center" 
+    class="bg-dk-navy-l p-8 min-h-30vh justify-center items-center"
+    id="dk-grey-l" 
     style="background-image: url(/assets/images/about/about_header.png); background-repeat:no-repeat; background-size:cover;">
     
     <div class="flex flex-col py-20 mx-auto container lg:pl-[28rem]" >
@@ -47,11 +44,11 @@
     </div>
 </section>
 
-<section class="banner grid bg-overlay">
-    <div class="flex items-center p-4 flex-col container mx-auto text-dk-navy">
-        <h2>Inspiring the World to Dance, One Step at a Time</h2>
-        <div class="flex flex-row p-8 mx-16">
-            <div class="object-contain max-h-fit">
+<section class="banner grid bg-overlay" id=overlay-orange>
+    <div class="p-4 container mx-auto text-dk-navy">
+        <h2 class="text-center">Inspiring the World to Dance, One Step at a Time</h2>
+        <div class="flex lg:flex-row p-8 mx-16" id="">
+            <div class="object-contain w-[65vw]">
                 <img src="/assets/images/screenshot-dk.png" alt="" />
             </div>
             <div class="p-14">
@@ -59,10 +56,11 @@
                 <p>Dance Kitchen was born out of a love for dance and a desire to make learning it accessible, enjoyable, and effective. Our mission is simple: to inspire the world to dance, one step at a time. We believe that everyone can and should dance, regardless of their background or experience. That's why we've created a groundbreaking dance learning app that serves as a personal tutor, helping you master the essential ingredients to cook up your dance skills.</p>
             </div>
         </div>
-        
-            <h2 class="pt-20">Start Your Dance Journey Today!</h2>
-            <div class="grid-flow-col pt-4 sm:hidden 2xl:grid">
-                <div class="grid md:grid-flow-col grid-flow-row max-w-lg">
+        <div class="min-h-[15vh]">
+            
+                <h2 class="pt-20 text-center">Start Your Dance Journey Today!</h2>
+                <div class="grid-flow-col pt-4 grid justify-items-center">
+                    <div class="grid md:grid-flow-col grid-flow-row max-w-lg">
     <a href="https://apps.apple.com/app/apple-store/id6443764461?pt=125642528">
       <img src="/assets/images/buttons/store_apple-download.png" alt="Apple Store Button"></img>
     </a>
@@ -72,8 +70,9 @@
 </div>
 
 <!-- class="mx-6 my-3 lg:mx-6 xl:mx-12 -->
-            </div>
-          
+                </div>
+             
+        </div> 
     </div>
 </section>
 
@@ -83,7 +82,10 @@
         <div class="flex flip-order items-center">
             <img class="p-8 rounded-lg max-h-[500px] justify-self-center" src="/assets/images/about/dancer1.png" alt="Revolutionizing Dance Education"></img> 
             <div class="grid py-8 px-16 ">
-                <h3 class="text-dk-blue-app">Revolutionizing Dance Education</h3>
+                <div class="flex items-center">
+                    <h3 class="text-dk-blue-app inline">Revolutionizing Dance Education</h3>
+                    
+                </div>
                 <p class="text-left pt-2 text-dk-navy">Traditionally, learning to dance has often meant adjusting to the pace of group classes or investing in private lessons. With Dance Kitchen, we're changing the game. Our unique selling proposition lies in our dynamic visualization of foot movements synchronized to music. This immersive experience empowers dancers of all levels to confidently master footwork patterns, fine-tune their timing, and shine on the dance floor. This is dance education for the modern world - flexible, personalized, and at your own pace.</p>
             </div>
         </div>
@@ -91,7 +93,10 @@
         <div class="flex flip-order items-center">
             <img class="p-8 rounded-lg max-h-[500px] justify-self-center" src="/assets/images/about/dancer2.png" alt="Why Choose Dance Kitchen"></img> 
             <div class="grid py-8 px-16 ">
-                <h3 class="text-dk-blue-app">Why Choose Dance Kitchen</h3>
+                <div class="flex items-center">
+                    <h3 class="text-dk-blue-app inline">Why Choose Dance Kitchen</h3>
+                    
+                </div>
                 <p class="text-left pt-2 text-dk-navy">Choosing Dance Kitchen means choosing a new and exciting way to learn to dance. It means saying goodbye to the frustration of forgetting steps and falling behind. It means learning to dance in a way that suits you - in your own time, at your own pace. And it means becoming part of a community of dance enthusiasts, all learning and growing together. Whether you're a beginner looking to take your first steps or an experienced dancer wanting to refine your technique, Dance Kitchen is here to support you on your dance journey.</p>
             </div>
         </div>
@@ -137,7 +142,4 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
-
-
-
 </html>

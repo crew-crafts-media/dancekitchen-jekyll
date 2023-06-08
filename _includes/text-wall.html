@@ -4,7 +4,12 @@
         <div class="flex flip-order items-center">
             <img class="p-8 rounded-lg max-h-[500px] justify-self-center" src="{{item.row_image}}" alt="{{item.title}}"></img> 
             <div class="grid py-8 px-16 ">
-                <h3 class="text-dk-blue-app">{{item.title}}</h3>
+                <div class="flex items-center">
+                    <h3 class="text-dk-blue-app inline">{{item.title}}</h3>
+                    {% for squares in item.links %}
+                        <img class="inline" src="{{squares.icon}}"></img>
+                    {% endfor %}
+                </div>
                 <p class="text-left pt-2 text-dk-navy">{{item.copy}}</p>
             </div>
         </div>
