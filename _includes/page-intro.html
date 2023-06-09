@@ -1,19 +1,19 @@
 <section class="banner grid bg-overlay" id={{page.intro.overlay}}>
     <div class="p-4 container mx-auto text-dk-navy">
-        <h2 class="text-center">{{page.intro.title}}</h2>
-        <div class="flex lg:flex-row p-8 mx-16" id="{{page.intro.flip}}">
-            <div class="object-contain w-[65vw]">
+        <h3 class="text-center p-[2%]">{{page.intro.title}}</h3>
+        <div class="flex md:flex-col mx-16" id="{{page.intro.flip}}">
+            <div class="object-contain hidden md:block">
                 <img src="{{page.intro._image}}" alt="{{page.intro.alt}}" />
             </div>
-            <div class="p-14">
-                <h3>{{page.intro.heading}}</h3>
-                <p>{{page.intro.copy}}</p>
+            <div class="md:pr-10 pt-8 lg:pt-20">
+                <h4>{{page.intro.heading}}</h4>
+                <p class="pt-4 mb-12 md:mb-0">{{page.intro.copy}}</p>
             </div>
         </div>
-        <div class="min-h-[15vh]">
+        <div class="md:min-h-[20vh] min-h-[50vh]">
             {% if page.intro.subtext == "BUTTONS" %}
-                <h2 class="pt-20 text-center">{{page.intro.subheader}}</h2>
-                <div class="grid-flow-col pt-4 grid justify-items-center">
+                <h2 class="text-center text-black">{{page.intro.subheader}}</h2>
+                <div class="grid-flow-col grid justify-items-center">
                     {% include store-buttons.html %}
                 </div>
             {% else %}

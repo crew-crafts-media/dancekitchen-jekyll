@@ -17,37 +17,37 @@
 nav a {
     font-weight: 600;
     margin: 8px;
+    font-size: 1.25rem;
 }
   
 h1, h2, h3 {
     font-family: 'Oswald Variable', sans-serif;
 }
   
-h1 {
+h1, h2 {
     font-weight: 500; /* Semi-Bold */
     font-size: 3.75rem;
 }
   
-.sub-header, h2, h3, h4 {
+.sub-header, h3 {
     font-weight: 400; /* regular */
 }
   
-h2 {
-    font-size: 2.75rem;
-}
-  
 h3 {
-    font-size: 1.75rem;
+    font-size: 3.4rem;
+    color: #004A70;
 }
   
 h4 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
     font-family: 'OpenSans', sans-serif;
+    color: #004A70;
 }
   
 body {
     font-family: 'OpenSans', sans-serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
   
 a:hover {
@@ -138,7 +138,7 @@ form [class*=col-] {
 .bg-overlay::before {
     content: ""; 
     position: absolute;
-    top: 60%;
+    top: 63%;
     left: 0;
     bottom: 0;
     right: 0; 
