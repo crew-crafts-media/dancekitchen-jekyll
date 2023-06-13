@@ -5,6 +5,21 @@
     <a href="https://play.google.com/store/apps/details?id=com.CrewCraftsMedia.DanceKitchen">
       <img src="/assets/images/buttons/store_google-download.png" alt="Google Store Button"></img>
     </a>
+
+    <a class="affiliateButton" href=>
+      <img className="" src={Astorebutton} alt="Dance Kitchen Apple App Store" />
+    </a>
 </div>
+
+<script>
+  const affiliateButton = document.querySelector('.affiliateButton')
+
+  const params = new Proxy(new URLSearchParams(location.search), {get:(searchParams, prop) => searchParams.get(prop),});
+    
+  console.log(params)
+
+
+  // https://apps.apple.com/app/apple-store/id6443764461?pt=125642528&ct=${campaignTracker}
+</script>
 
 <!-- class="mx-6 my-3 lg:mx-6 xl:mx-12 -->
