@@ -2,7 +2,7 @@
   "name": "ioc-jekyll-tailwind",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "jekyll:dev": "bundle exec jekyll serve --watch",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PollockCR/ioc-jekyll-tailwind.git"
+    "url": ""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PollockCR/ioc-jekyll-tailwind/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/PollockCR/ioc-jekyll-tailwind#readme",
+  "homepage": "",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.13",
