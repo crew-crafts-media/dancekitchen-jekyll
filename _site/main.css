@@ -1,0 +1,159 @@
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.navigation{
+    background: white;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+    box-shadow: 1px -4px 11px 0px rgb(0 0 0);
+}  
+
+nav a {
+    font-weight: 600;
+    margin: 8px;
+    font-size: 1.25rem;
+}
+  
+h1, h2, h3 {
+    font-family: 'Oswald Variable', sans-serif;
+}
+  
+h1, h2 {
+    font-weight: 500; /* Semi-Bold */
+    font-size: 3.75rem;
+}
+  
+.sub-header, h3 {
+    font-weight: 400; /* regular */
+}
+  
+h3 {
+    font-size: 3.4rem;
+    color: #004A70;
+}
+  
+h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: 'OpenSans', sans-serif;
+    color: #004A70;
+}
+  
+body {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 1.1rem;
+}
+  
+a:hover {
+    color: #F55602;
+}
+
+#dk-grey-l {
+    color: #F9F8F8
+}
+
+#dk-navy-l {
+    color: #004A70;
+}
+
+#dk-navy-d {
+    color: #002335;
+}
+
+#flip {
+    flex-direction: row-reverse;
+}
+
+.flip-order:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+/* Images */  
+.bg-dancers   { 
+    background-image: url(../images/home_header.png);
+    background-position-y: 30px;
+    position: relative;
+}
+
+/* Email Form */
+.email-sub-field {
+    text-align: center;
+    display: inline;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+input {
+    border-style: solid;
+    padding: 0.6em;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+}
+  
+input:focus,
+input:focus {
+    outline: none;
+    border: 4px solid #e67e22;
+}
+  
+input[type="submit"] {
+    width: auto;
+}
+  
+form [class*=col-] {
+    padding: 5px;
+}
+
+.ctaButton {
+    background-color: #F55602;
+    color: white;
+    margin: 1.5rem auto 0 auto;
+    padding: 0.4em 1.8rem;
+    border-radius: 1rem;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+/* Overlay CSS */
+.banner {
+    /* background-image: url(''); */
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    /* padding: 5%; */
+}
+
+.bg-overlay {
+    position: relative;
+}
+
+.bg-overlay::before {
+    content: ""; 
+    position: absolute;
+    top: 63%;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+}
+
+#overlay-orange::before {
+    background-color: #FD945C;
+}
+
+#overlay-blue::before {
+    background-color: #0085BD;
+}
+
+.bg-overlay > * {
+    position: relative; 
+}
