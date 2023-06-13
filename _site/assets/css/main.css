@@ -396,14 +396,14 @@ video {
   max-height: 23vh;
 }.max-h-\[500px\] {
   max-height: 500px;
-}.min-h-\[20vh\] {
-  min-height: 20vh;
 }.min-h-\[30vh\] {
   min-height: 30vh;
-}.min-h-\[90px\] {
-  min-height: 90px;
 }.min-h-\[50vh\] {
   min-height: 50vh;
+}.min-h-\[90px\] {
+  min-height: 90px;
+}.min-h-screen {
+  min-height: 100vh;
 }.w-full {
   width: 100%;
 }.w-screen {
@@ -426,6 +426,10 @@ video {
   grid-auto-rows: min-content;
 }.grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }.flex-row {
   flex-direction: row;
 }.flex-col {
@@ -452,6 +456,8 @@ video {
   gap: 2rem;
 }.self-start {
   align-self: flex-start;
+}.self-center {
+  align-self: center;
 }.justify-self-center {
   justify-self: center;
 }.whitespace-nowrap {
@@ -506,12 +512,6 @@ video {
 }.py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }.pb-6 {
   padding-bottom: 1.5rem;
 }.pb-8 {
@@ -532,6 +532,8 @@ video {
   padding-top: 1.5rem;
 }.pt-8 {
   padding-top: 2rem;
+}.pl-2 {
+  padding-left: 0.5rem;
 }.text-left {
   text-align: left;
 }.text-center {
@@ -568,12 +570,9 @@ video {
 }.text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}.text-dk-blue {
+}.text-dk-navy-d {
   --tw-text-opacity: 1;
-  color: rgb(0 161 228 / var(--tw-text-opacity));
-}.text-dk-blue-d {
-  --tw-text-opacity: 1;
-  color: rgb(0 133 189 / var(--tw-text-opacity));
+  color: rgb(0 35 53 / var(--tw-text-opacity));
 }.no-underline {
   text-decoration-line: none;
 }.navigation{
@@ -611,6 +610,8 @@ video {
     color: #F9F8F8
 }#dk-navy-l {
     color: #004A70;
+}#dk-navy-d {
+    color: #002335;
 }#flip {
     flex-direction: row-reverse;
 }.flip-order:nth-child(even){
@@ -676,8 +677,6 @@ input:focus {
     display: inline;
   }.sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
-  }.sm\:pt-4 {
-    padding-top: 1rem;
   }
 }@media (min-width: 768px) {.md\:order-none {
     order: 0;
@@ -687,8 +686,6 @@ input:focus {
     display: block;
   }.md\:inline {
     display: inline;
-  }.md\:min-h-\[50vh\] {
-    min-height: 50vh;
   }.md\:min-h-\[20vh\] {
     min-height: 20vh;
   }.md\:grid-flow-col {

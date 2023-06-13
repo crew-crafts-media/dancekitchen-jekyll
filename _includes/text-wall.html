@@ -4,10 +4,10 @@
         <div class="lg:flex flip-order">
             <img class="p-8 rounded-lg mx-auto object-contain max-h-[500px]" src="{{item.row_image}}" alt="{{item.title}}"></img> 
             <div class="py-8 px-16 ">
-                <div class="">
+                <div class="flex flex-row">
                     <h3 class="text-dk-blue-app">{{item.title}}</h3>
                     {% for squares in item.links %}
-                        <img class="inline" src="{{squares.icon}}"></img>
+                        <img class="pl-2" src="{{squares.icon}}"></img>
                     {% endfor %}
                 </div>
                 <p class="text-left pt-3 text-dk-navy">{{item.copy}}</p>

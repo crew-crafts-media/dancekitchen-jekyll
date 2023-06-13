@@ -62,6 +62,10 @@ a:hover {
     color: #004A70;
 }
 
+#dk-navy-d {
+    color: #002335;
+}
+
 #flip {
     flex-direction: row-reverse;
 }
