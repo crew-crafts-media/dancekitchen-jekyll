@@ -50,7 +50,7 @@
     }
     document.getElementById('cookie-notice-accept').addEventListener("click",function() {
         createCookie('cookie-notice-accepted','true',31);
-        let tracker = location.search.replace('?','') 
+        let tracker = location.search.replace('?utm_source','') 
         createCookie('cookie-affiliate',tracker,31);
         acceptedCookies()
         document.getElementById('cookie-notice').style.display = 'none';
