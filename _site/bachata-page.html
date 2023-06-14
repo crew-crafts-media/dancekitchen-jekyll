@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <meta name="description" content="Dance Kitchen Home">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com"  />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+    <main class="w-full">
+        <div class="min-h-[90px]">
+    <div class="p-6 flex flex-row items-center navigation w-full">
+      <a href="/">
+        <img class="max-h-20" src="/assets/images/logo.png" alt="Dance Kitchen Logo"></img>
+      </a>
+      <div class="grow"></div>
+        <nav class="justify-end no-underline text-right text-2xl text-dk-navy pr-6">
+          <a class="nav-item" href="/about">About</a>
+          <a class="nav-item md:inline hidden" href="/how-it-works-page copy.html">How it WorkZ</a>
+          <a class="nav-item" href="/how-it-works-page.html">How it Works</a>
+
+          <a class="nav-item md:inline hidden" href="/dancestyles-page.html">Dance Styles</a>
+          <a class="nav-item" href="/teachers">Our Teachers</a>
+          <a class="nav-item md:inline hidden" href="">Dance Dish Diares</a>
+          <a class="nav-item md:inline hidden" href="/community-page.html">Join the Team</a>
+        </nav>  
+    </div>
+</div>
+
+        <div>
+    <img class="w-screen" src="/assets/images/pages/bachata_page.png"/>
+</div>
+
+        <footer class="grid grid-cols-1 md:grid-cols-3 bg-dk-navy-l text-white">
+    <div class="grid auto-rows-min items-start">
+        <div class="pl-8 pt-8 whitespace-nowrap">
+          <img class="max-h-12 inline" src="/assets/images/logo.png" alt="Dance Kitchen Logo"></img>
+          <h2 class="align-middle ml-2 sm:inline hidden">Dance Kitchen</h2>
+        </div>
+        <div class="pl-8 pr-6">
+          <p>We're on a mission to inspire the world to dance, and empower dancers around the world. Stay tuned as we expand Dance Kitchen with additional styles and patterns!</p>
+        </div>
+    </div>
+    <div class="py-6 md:pt-20 mx-auto grid content-center">
+      <div class="grid md:grid-flow-col grid-flow-row max-w-lg">
+    <a class="p-3 affiliateButton" href="https://apps.apple.com/app/apple-store/id6443764461?pt=125642528">
+      <img src="/assets/images/buttons/store_apple-download.png" alt="Apple Store Button"></img>
+    </a>
+    <a class="p-3" href="https://play.google.com/store/apps/details?id=com.CrewCraftsMedia.DanceKitchen">
+      <img src="/assets/images/buttons/store_google-download.png" alt="Google Store Button"></img>
+    </a>
+</div>
+    </div>
+
+    <div class="grid auto-rows-min gap-2 content-end justify-end px-8 py-6">
+     
+      <h4>Let's Connect.</h4>
+      <div class="flex">
+        <a class="inline" href="https://www.instagram.com/dancekitchen.io/"><img class="max-h-24" src="/assets/images/icons/ig.png" alt="Instagram Icon"></img></a>
+        <a class="inline" href="mailto:support@dancekitchen.io"><img class="max-h-24" src="/assets/images/icons/email.png" alt="Email Icon"></img></a>
+      </div>
+    </div>
+  </footer>
+  <div class="text-center bg-dk-navy-l italic text-med text-slate-300 p-1"><p>Copyright Crew Crafts Media Inc. 2023</p></div>
+
+        <script src="/assets/scripts/affButton.js"></script>
+        <div id="cookie-notice">
+    <span>We would like to use third party cookies and scripts to improve the functionality of this website.</span>
+    
+    <a href="/privacy" class="button-subtle">More info</a>
+    <a id="cookie-notice-accept" class="button">Approve</a>
+    <!-- Optional close button that declines the cookies -->
+    <span id="close-cookie-banner"> X </span>
+</div>
+<script>
+
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+
+    function acceptedCookies(){
+        let tracker = readCookie('cookie-affiliate')
+        const affiliateButton = document.querySelectorAll('.affiliateButton')
+            affiliateButton.forEach(button => {
+                button.href = `https://apps.apple.com/app/apple-store/id6443764461?pt=125642528&ct=${tracker}`
+            })
+    }
+
+    if(readCookie('cookie-notice-accepted')=='true') {
+        // Add tracking scripts here
+        acceptedCookies()
+        // End tracking scripts 
+    } else {
+        document.getElementById('cookie-notice').style.display = 'block';
+    }
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('cookie-notice-accepted','true',31);
+        let tracker = location.search.replace('?','') 
+        createCookie('cookie-affiliate',tracker,31);
+        acceptedCookies()
+        document.getElementById('cookie-notice').style.display = 'none';
+    });
+    document.querySelector("#close-cookie-banner").addEventListener("click", (e) => {
+        document.querySelector("#cookie-notice").style.display = 'none';
+    });
+</script>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

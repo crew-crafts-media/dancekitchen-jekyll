@@ -19,19 +19,21 @@
 
 title: Dance Kitchen
 email: support@dancekitchen.io
-description: >- # this means to ignore newlines until "baseurl:"
+# this means to ignore newlines until "baseurl:"
+description: >- 
   Your Personal Dance Tutor
-baseurl: "" # the subpath of your site, e.g. /blog
+# the subpath of your site, e.g. /blog
+baseurl: "" 
 url: "https://dancekitchen.io"
 
 
 # Build settings
-plugins:
-  - jekyll-feed
-  - jekyll-postcss
+# plugins:
+# - jekyll-feed
+#  - jekyll-postcss
 
-postcss:
-  cache: false
+# postcss:
+#   cache: false
 
 css_dir: "assets/css" # defaults to "css"
 
@@ -45,8 +47,6 @@ css_dir: "assets/css" # defaults to "css"
 #
 exclude:
   - node_modules/
-  - yarn.lock
-  - postcss.config.js
   - tailwind.config.js
   - package.json
   - README.md

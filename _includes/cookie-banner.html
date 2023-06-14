@@ -7,6 +7,7 @@
     <span id="close-cookie-banner"> X </span>
 </div>
 <script>
+
     function createCookie(name,value,days) {
         var expires = "";
         if (days) {
@@ -16,6 +17,7 @@
         }
         document.cookie = name + "=" + value + expires + "; path=/";
     }
+
     function readCookie(name) {
         var nameEQ = name + "=";
         var ca = document.cookie.split(';');
@@ -26,22 +28,34 @@
         }
         return null;
     }
+
     function eraseCookie(name) {
         createCookie(name,"",-1);
     }
-    if(readCookie('cookie-notice-dismissed')=='true') {
-        // Add tracking scripts here 
+
+    function acceptedCookies(){
+        let tracker = readCookie('cookie-affiliate')
+        const affiliateButton = document.querySelectorAll('.affiliateButton')
+            affiliateButton.forEach(button => {
+                button.href = `https://apps.apple.com/app/apple-store/id6443764461?pt=125642528&ct=${tracker}`
+            })
+    }
+
+    if(readCookie('cookie-notice-accepted')=='true') {
+        // Add tracking scripts here
+        acceptedCookies()
         // End tracking scripts 
     } else {
         document.getElementById('cookie-notice').style.display = 'block';
     }
     document.getElementById('cookie-notice-accept').addEventListener("click",function() {
-        createCookie('cookie-notice-dismissed','true',31);
+        createCookie('cookie-notice-accepted','true',31);
+        let tracker = location.search.replace('?','') 
+        createCookie('cookie-affiliate',tracker,31);
+        acceptedCookies()
         document.getElementById('cookie-notice').style.display = 'none';
-        location.reload();
     });
     document.querySelector("#close-cookie-banner").addEventListener("click", (e) => {
-        
         document.querySelector("#cookie-notice").style.display = 'none';
     });
 </script>

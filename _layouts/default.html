@@ -1,7 +1,5 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
 
@@ -15,9 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="/assets/css/main.css">
-
 </head>
-
 <body>
     <main class="w-full">
         {% include header-nav.html %}
@@ -25,10 +21,9 @@
         {{ content }}
 
         {% include footer.html %}
+        <script src="/assets/scripts/affButton.js"></script>
+        {% include cookie-banner.html %}
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
-
-
-
 </html>

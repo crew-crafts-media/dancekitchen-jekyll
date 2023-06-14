@@ -1,10 +1,9 @@
+const cssnano = require('cssnano')({ preset: 'default' })
+
 module.exports = {
   plugins: [
-    require('tailwindcss')('./tailwind.config.js'),
-    require('postcss-import'),
     require('autoprefixer'),
-    ...(process.env.JEKYLL_ENV == "production"
-      ? [require('cssnano')({})]
-      : [])
+    require('tailwindcss')('./tailwind.config.js'),
+    ...(process.env.NODE_ENV === 'production' ? [cssnano] : [])
   ]
 }
