@@ -523,17 +523,9 @@ video {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-.my-3 {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
 }
 .my-5 {
   margin-top: 1.25rem;
@@ -550,6 +542,9 @@ video {
 }
 .ml-2 {
   margin-left: 0.5rem;
+}
+.block {
+  display: block;
 }
 .inline {
   display: inline;
@@ -986,6 +981,33 @@ form [class*=col-] {
     position: relative; 
 }
 
+/* Cookies */
+#cookie-notice {
+    padding: 0.5rem 1rem;
+    display: none;
+    text-align: center;
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+    bottom: 0;
+    width: calc(100% - 2rem);
+    background: #222;
+    color: rgba(255,255,255,0.8);
+}
+#cookie-notice a {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+#cookie-notice .button-subtle {
+  opacity: 0.8;
+}
+#close-cookie-banner {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  opacity: 0.5
+}
 @media (min-width: 640px) {
 
   .sm\:inline {
@@ -996,7 +1018,6 @@ form [class*=col-] {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
-
 @media (min-width: 768px) {
 
   .md\:order-none {
@@ -1048,17 +1069,11 @@ form [class*=col-] {
     padding-top: 5rem;
   }
 }
-
 @media (min-width: 1024px) {
 
   .lg\:mx-32 {
     margin-left: 8rem;
     margin-right: 8rem;
-  }
-
-  .lg\:mx-6 {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
   }
 
   .lg\:flex {
@@ -1081,13 +1096,7 @@ form [class*=col-] {
     padding-top: 5rem;
   }
 }
-
 @media (min-width: 1280px) {
-
-  .xl\:mx-12 {
-    margin-left: 3rem;
-    margin-right: 3rem;
-  }
 
   .xl\:mx-64 {
     margin-left: 16rem;

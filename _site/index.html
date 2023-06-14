@@ -42,15 +42,13 @@
       <img class="max-h-[23vh] inline" src="/assets/images/logo-dk.png" alt="Dance Kitchen Logo"></img>
           <h1 class="pt-4 pb-8 text-3xl text-dk-navy-l sub-header">Your personal tutor to cook up your dance skills</h1>
           <div class="grid md:grid-flow-col grid-flow-row max-w-lg">
-    <a class="p-3" href="https://apps.apple.com/app/apple-store/id6443764461?pt=125642528">
+    <a class="p-3 affiliateButton" href="https://apps.apple.com/app/apple-store/id6443764461?pt=125642528">
       <img src="/assets/images/buttons/store_apple-download.png" alt="Apple Store Button"></img>
     </a>
     <a class="p-3" href="https://play.google.com/store/apps/details?id=com.CrewCraftsMedia.DanceKitchen">
       <img src="/assets/images/buttons/store_google-download.png" alt="Google Store Button"></img>
     </a>
 </div>
-
-<!-- class="mx-6 my-3 lg:mx-6 xl:mx-12 -->
     </div>
     <div class="pb-6 grid justify-center">
       <img class="lg:max-w-[16rem] max-w-[12rem]" src="assets/images/screenshot-dk.png" alt="Dance Kitchen Screenshot"></img>
@@ -200,15 +198,13 @@
     </div>
     <div class="py-6 md:pt-20 mx-auto grid content-center">
       <div class="grid md:grid-flow-col grid-flow-row max-w-lg">
-    <a class="p-3" href="https://apps.apple.com/app/apple-store/id6443764461?pt=125642528">
+    <a class="p-3 affiliateButton" href="https://apps.apple.com/app/apple-store/id6443764461?pt=125642528">
       <img src="/assets/images/buttons/store_apple-download.png" alt="Apple Store Button"></img>
     </a>
     <a class="p-3" href="https://play.google.com/store/apps/details?id=com.CrewCraftsMedia.DanceKitchen">
       <img src="/assets/images/buttons/store_google-download.png" alt="Google Store Button"></img>
     </a>
 </div>
-
-<!-- class="mx-6 my-3 lg:mx-6 xl:mx-12 -->
     </div>
 
     <div class="grid auto-rows-min gap-2 content-end justify-end px-8 py-6">
@@ -222,6 +218,68 @@
   </footer>
   <div class="text-center bg-dk-navy-l italic text-med text-slate-300 p-1"><p>Copyright Crew Crafts Media Inc. 2023</p></div>
 
+        <script src="/assets/scripts/affButton.js"></script>
+        <div id="cookie-notice">
+    <span>We would like to use third party cookies and scripts to improve the functionality of this website.</span>
+    
+    <a href="/privacy" class="button-subtle">More info</a>
+    <a id="cookie-notice-accept" class="button">Approve</a>
+    <!-- Optional close button that declines the cookies -->
+    <span id="close-cookie-banner"> X </span>
+</div>
+<script>
+
+    function createCookie(name,value,days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+    function eraseCookie(name) {
+        createCookie(name,"",-1);
+    }
+
+    function acceptedCookies(){
+        let tracker = readCookie('cookie-affiliate')
+        const affiliateButton = document.querySelectorAll('.affiliateButton')
+            affiliateButton.forEach(button => {
+                button.href = `https://apps.apple.com/app/apple-store/id6443764461?pt=125642528&ct=${tracker}`
+            })
+    }
+
+    if(readCookie('cookie-notice-accepted')=='true') {
+        // Add tracking scripts here
+        acceptedCookies()
+        // End tracking scripts 
+    } else {
+        document.getElementById('cookie-notice').style.display = 'block';
+    }
+    document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+        createCookie('cookie-notice-accepted','true',31);
+        let tracker = location.search.replace('?','') 
+        createCookie('cookie-affiliate',tracker,31);
+        acceptedCookies()
+        document.getElementById('cookie-notice').style.display = 'none';
+    });
+    document.querySelector("#close-cookie-banner").addEventListener("click", (e) => {
+        document.querySelector("#cookie-notice").style.display = 'none';
+    });
+</script>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
