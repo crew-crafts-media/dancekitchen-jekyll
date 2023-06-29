@@ -1,25 +1,28 @@
-<section class="banner grid bg-overlay" id={{page.intro.overlay}}>
-    <div class="p-4 container mx-auto text-dk-navy">
-        <h3 class="text-center p-[2%]">{{page.intro.title}}</h3>
-        <div class="flex md:flex-col mx-16" id="{{page.intro.flip}}">
-            <div class="object-contain hidden md:block">
+<section class="grid p-5p bg-gradient-to-t {{page.intro.gradient_tw}} to-white via-white via-50%">
+    <div class="container mx-auto text-dk-navy">
+
+        <h3 class="text-center">{{page.intro.title}}</h3>
+        
+        <div class="max-w-6xl mx-auto flex {% if page.intro.flip == 'flip' %} flex-row-reverse {% endif %}">
+            <div class="hidden object-contain p-4 mt-8 md:block">
                 <img src="{{page.intro._image}}" alt="{{page.intro.alt}}" />
             </div>
-            <div class="md:pr-10 pt-8 lg:pt-20">
+            <div class="pt-8 md:pr-10 lg:pt-20">
                 <h4>{{page.intro.heading}}</h4>
                 <p class="pt-4 mb-12 md:mb-0">{{page.intro.copy}}</p>
             </div>
         </div>
-        <div class="md:min-h-[20vh] min-h-[50vh]">
+
+        <div class="">
             {% if page.intro.subtext == "BUTTONS" %}
-                <h2 class="text-center text-black">{{page.intro.subheader}}</h2>
-                <div class="grid-flow-col grid justify-items-center">
+                <h3 class="text-center">{{page.intro.subheader}}</h3>
+                <div class="grid justify-items-center">
                     {% include store-buttons.html %}
                 </div>
             {% else %}
-                <div class="grid grid-flow-col items-end">
-                    <h2>{{page.intro.subheader}}</h2>
-                    <p class="{{page.intro.subtext-color}} self-center">{{page.intro.subtext}}</p>
+                <div class="grid items-end max-w-6xl grid-flow-col mx-auto">
+                    <h3 class="max-md:hidden">{{page.intro.subheader}}</h3>
+                    <p class="self-center">{{page.intro.subtext}}</p>
                 </div>
             {% endif %} 
         </div> 

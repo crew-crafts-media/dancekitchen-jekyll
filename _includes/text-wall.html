@@ -1,16 +1,18 @@
 <section class="bg-dk-grey">
-    <div class="py-8 container mx-auto">
+    <div class="container py-8 mx-auto">
         {% for item in page.wall %}
         <div class="lg:flex flip-order">
             <img class="p-8 rounded-lg mx-auto object-contain max-h-[500px]" src="{{item.row_image}}" alt="{{item.title}}"></img> 
-            <div class="py-8 px-16 ">
+            <div class="px-16 py-8 ">
                 <div class="flex flex-row">
-                    <h3 class="text-dk-blue-app">{{item.title}}</h3>
+                    <h3 class="text-[#145da0] mr-2">{{item.title}}</h3>
                     {% for squares in item.links %}
-                        <img class="pl-2" src="{{squares.icon}}"></img>
+                        <div class="grid items-center aspect-square">
+                            <img class="align-middle min-w-[70px]" src="{{squares.icon}}"></img>
+                        </div>
                     {% endfor %}
                 </div>
-                <p class="text-left pt-3 text-dk-navy">{{item.copy}}</p>
+                <p class="pt-3 text-left text-dk-navy">{{item.copy}}</p>
             </div>
         </div>
         {% endfor %}

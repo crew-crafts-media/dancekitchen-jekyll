@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "jekyll:dev": "bundle exec jekyll serve --watch",
     "jekyll:build": "JEKYLL_ENV=production bundle exec jekyll build",
-    "css:dev": "postcss main.css --output assets/css/main.css --watch",
-    "css:build": "NODE_ENV=production postcss main.css --output assets/css/main.css",
+    "css:dev": "postcss style.css --output assets/css/main.css --watch",
+    "css:build": "NODE_ENV=production postcss style.css --output assets/css/main.css",
     "dev": "concurrently --kill-others \"npm run jekyll:dev\" \"npm run css:dev\"",
     "build": "npm run css:build && npm run jekyll:build"
   },
